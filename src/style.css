@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+  --c-primary:    #C0492B;
+  --c-navy:       #0D2541;
+  --c-steel:      #3D6CA8;
+  --c-bg:         #FAFBFD;
+  --c-white:      #FFFFFF;
+  --c-text:       #1C2B3A;
+  --c-muted:      #6B7785;
+  --c-border:     #E3E8EF;
+  --c-btn-hover:  #A23C22;
+  --c-tint:       #EEF2F7;
+
+  --radius-sm: 2px;
+  --radius-md: 6px;
+
+  --shadow-sm: 0 2px 8px rgba(13,37,65,0.06);
+  --shadow-md: 0 8px 32px rgba(13,37,65,0.10);
+  --shadow-lg: 0 20px 60px rgba(13,37,65,0.14);
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Georgian', system-ui, sans-serif;
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter', 'Noto Sans Georgian', sans-serif;
+  color: var(--c-navy);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+p { line-height: 1.7; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Shared layout helpers ───────────────────────────────────── */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+/* ── Shared UI elements ──────────────────────────────────────── */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 24px;
+  letter-spacing: -0.3px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--c-primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--c-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192,73,43,0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c-primary);
+  border: 1.5px solid var(--c-primary);
+}
+.btn-outline:hover {
+  background: var(--c-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Divider line ────────────────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 3px;
+  background: var(--c-primary);
+  margin: 20px 0 28px;
+  border-radius: 2px;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-tint);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-steel);
+  border-radius: 4px;
+  border: 2px solid var(--c-tint);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-primary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--c-tint);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-steel) var(--c-tint);
+}
+
+/* ── #app reset (override old Vite default) ──────────────────── */
+#app {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border: none;
+  min-height: unset;
+  display: block;
+  box-sizing: border-box;
+}
