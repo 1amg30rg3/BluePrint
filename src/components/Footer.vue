@@ -1,5 +1,6 @@
 <script setup>
 import { inject } from 'vue'
+import SiteCredit from './SiteCredit.vue'
 const t = inject('t')
 
 const FB_URL = 'https://www.facebook.com/profile.php?id=61590561637800'
@@ -73,6 +74,12 @@ function scrollTo(id) {
             </span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="footer-credit">
+      <div class="container credit-inner">
+        <SiteCredit />
       </div>
     </div>
 
@@ -230,6 +237,16 @@ function scrollTo(id) {
 
 a.info-line:hover {
   color: #fff;
+}
+
+.footer-credit {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.credit-inner {
+  display: flex;
+  justify-content: center;
 }
 
 .footer-bottom {

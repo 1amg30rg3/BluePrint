@@ -56,6 +56,14 @@ export const translations = {
       rights: 'ყველა უფლება დაცულია',
       followUs: 'გამოგვყევით',
       links: 'გვერდები',
+      credit: {
+        label: 'შექმნა :name-მა',
+        pitch: 'გსურთ ასეთივე საიტი?',
+        cta: 'ვისაუბროთ',
+      },
+    },
+    common: {
+      newTab: '(გაიხსნება ახალ ჩანართში)',
     },
   },
 
@@ -116,6 +124,14 @@ export const translations = {
       rights: 'All rights reserved',
       followUs: 'Follow Us',
       links: 'Pages',
+      credit: {
+        label: 'Built by :name',
+        pitch: 'Need a site like this?',
+        cta: 'Let’s talk',
+      },
+    },
+    common: {
+      newTab: '(opens in a new tab)',
     },
   },
 
@@ -176,6 +192,14 @@ export const translations = {
       rights: 'Все права защищены',
       followUs: 'Следите за нами',
       links: 'Страницы',
+      credit: {
+        label: 'Сделано в :name',
+        pitch: 'Нужен такой же сайт?',
+        cta: 'Обсудим',
+      },
+    },
+    common: {
+      newTab: '(откроется в новой вкладке)',
     },
   },
 }
