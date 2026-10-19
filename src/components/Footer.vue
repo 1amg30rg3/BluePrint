@@ -1,7 +1,7 @@
 <script setup>
 import { inject } from 'vue'
-import SiteCredit from './SiteCredit.vue'
 const t = inject('t')
+const lang = inject('lang')
 
 const FB_URL = 'https://www.facebook.com/profile.php?id=61590561637800'
 const WA_URL = 'https://wa.me/995510004474'
@@ -79,7 +79,7 @@ function scrollTo(id) {
 
     <div class="footer-credit">
       <div class="container credit-inner">
-        <SiteCredit />
+        <websavvys-credit :lang="lang"><a href="https://websavvys.com/">WebSavvys</a></websavvys-credit>
       </div>
     </div>
 
@@ -240,13 +240,23 @@ a.info-line:hover {
 }
 
 .footer-credit {
-  padding: 32px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 10px;
 }
 
 .credit-inner {
   display: flex;
   justify-content: center;
+}
+
+websavvys-credit {
+  --wsc-gold: color-mix(in oklab, var(--c-primary) 82%, white);
+  --wsc-ink: color-mix(in oklab, var(--c-navy) 70%, black);
+  --wsc-focus: var(--wsc-gold);
+}
+
+websavvys-credit > a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
 }
 
 .footer-bottom {
